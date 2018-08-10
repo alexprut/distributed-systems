@@ -1,0 +1,393 @@
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,letterpaper]{geometry} % Page margins
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{afterpage}
+\usepackage{nopageno}
+\usepackage{xcolor} % Required for specifying colors by name
+\usepackage{color}
+\definecolor{blue}{RGB}{52, 152, 219}
+\definecolor{cloud}{RGB}{236,240,241}
+
+% Font Settings
+\usepackage{helvet}
+
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+
+% Bibliography
+\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+\addbibresource{bibliography.bib} % BibTeX bibliography file
+\defbibheading{bibempty}{}
+
+
+\usepackage{graphicx} % Required for including pictures
+\graphicspath{{img/}} % Specifies the directory where pictures are stored
+\usepackage{tikz} % Required for drawing custom shapes
+\usepackage[english]{babel} % English language/hyphenation
+
+\usepackage{enumitem} % Customize lists
+\setlist{nolistsep} % Reduce spacing between bullet points and numbered lists
+
+\usepackage{eso-pic} % Required for specifying an image background in the title page
+\usepackage{hyperref}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\pagecolor{cloud}\afterpage{\nopagecolor}
+\centering
+\vspace*{3cm}
+\par\normalfont\fontsize{35}{35}\sffamily\selectfont
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\vspace*{1cm}
+\textbf{Distributed Systems}\\
+{\LARGE the source of truth} \\ {\small mestro edition}\par
+\vspace*{1cm}
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent Feel free to contribute at \url{https://github.com/alexprut/distributed-systems}\\ % URL
+
+\noindent \textit{First release, August 2018, version 1.0.0} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+ 
+\tableofcontents % Print the table of contents itself
+
+
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+Both in the libraries and on the internet plenty of resources are available regarding the \textbf{Distributed Systems} topic. All of them are just a better explanation of the same exact source of truth, i.e. academic papers published by the brightest minds in the world. This book is just an ordered collection of all those publications. Below is depicted the order in which you can read the papers. The primary order is based on the citations dependency in the publications, secondary order is based on the year of publication and finally the last criteria is based on the topic dependency.
+
+\vspace*{5mm}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth]{dependency}
+\end{figure}
+
+\chapter{Time, Clocks, and the Ordering of Events in a Distributed System}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Leslie Lamport
+\newline\newline
+\textbf{Publication year}: 1978
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/time-clocks.pdf}
+
+\chapter{Distributed Snapshots: Determining Global States of Distributed Systems}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+K. Mani Chandy, Leslie Lamport
+\newline\newline
+\textbf{Publication year}: 1985
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/distributed-snapshots.pdf}
+
+\chapter{Impossibility of Distributed Consensus with One Faulty Process}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Michael J. Fischer, Nancy A. Lynch, Michael S. Paterson
+\newline\newline
+\textbf{Publication year}: 1985
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/impossibility-of-consensus-with-one-faulty-process.pdf}
+
+\chapter{The Byzantine Generals Problem}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Leslie Lamport, Robert Shostak, Marshall Pease
+\newline\newline
+\textbf{Publication year}: 1982
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-triangle-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/byzantine-generals-problem.pdf}
+
+\chapter{The Part-Time Parliament}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Leslie Lamport
+\newline\newline
+\textbf{Publication year}: 1998
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/the-part-time-parliament.pdf}
+
+\chapter{Paxos Made Simple}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Leslie Lamport
+\newline\newline
+\textbf{Publication year}: 2001
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/paxos-made-simple.pdf}
+
+\chapter{Brewer’s Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Seth Gilbert, Nancy Lynch
+\newline\newline
+\textbf{Publication year}: 2002
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-triangle-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/cap-theorem.pdf}
+
+\chapter{Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+David Karger, Eric Lehman, Tom Leighton, Matthew Levine, Daniel Lewin, Rina Panigrahy
+\newline\newline
+\textbf{Publication year}: 1997
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-rectangle-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/consistent-hashing.pdf}
+
+\chapter{Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Avinash Lakshman, Prashant Malik
+\newline\newline
+\textbf{Publication year}: 2010
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-rectangle-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/chord.pdf}
+
+\chapter{Bigtable: A Distributed Storage System for Structured Data}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach Mike Burrows, Tushar Chandra, Andrew Fikes, Robert E. Gruber
+\newline\newline
+\textbf{Publication year}: 2006
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-rectangle-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/bigtable.pdf}
+
+\chapter{Dynamo: Amazon’s Highly Available Key-value Store}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall and Werner Vogels
+\newline\newline
+\textbf{Publication year}: 2007
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-rectangle-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/dynamo.pdf}
+
+\chapter{The Chubby lock service for loosely-coupled distributed systems}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Mike Burrows
+\newline\newline
+\textbf{Publication year}: 2006
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/chubby.pdf}
+
+\chapter{The Google File System}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Sanjay Ghemawat, Howard Gobioff, and Shun-Tak Leung
+\newline\newline
+\textbf{Publication year}: 2003
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-rectangle-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/gfs.pdf}
+
+\chapter{MapReduce: Simplified Data Processing on Large Clusters}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Jeffrey Dean, Sanjay Ghemawat
+\newline\newline
+\textbf{Publication year}: 2004
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/mapreduce.pdf}
+
+\chapter{Cassandra - A Decentralized Structured Storage System}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Avinash Lakshman, Prashant Malik
+\newline\newline
+\textbf{Publication year}: 2010
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-rectangle-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/cassandra.pdf}
+
+\chapter{Paxos Made Live - An Engineering Perspective}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Tushar Chandra, Robert Griesemer, Joshua Redstone
+\newline\newline
+\textbf{Publication year}: 2007
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/paxos-made-live.pdf}
+
+\chapter{Spanner: Google’s Globally-Distributed Database}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+James C. Corbett, Jeffrey Dean, Michael Epstein, Andrew Fikes, Christopher Frost, JJ Furman, Sanjay Ghemawat, Andrey Gubarev, Christopher Heiser, Peter Hochschild, Wilson Hsieh, Sebastian Kanthak, Eugene Kogan, Hongyi Li, Alexander Lloyd, Sergey Melnik, David Mwaura, David Nagle, Sean Quinlan, Rajesh Rao, Lindsay Rolig, Yasushi Saito, Michal Szymaniak, Christopher Taylor, Ruth Wang, Dale Woodford
+\newline\newline
+\textbf{Publication year}: 2012
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-rectangle-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/spanner.pdf}
+
+\chapter{Spanner, TrueTime and the CAP Theorem}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Eric Brewer
+\newline\newline
+\textbf{Publication year}: 2017
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-triangle-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/spanner-cap.pdf}
+
+
+\chapter{ZooKeeper: Wait-free coordination for Internet-scale systems}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Patrick Hunt, Mahadev Konar, Flavio P. Junqueira, Benjamin Reed
+\newline\newline
+\textbf{Publication year}: 2010
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/zookeeper.pdf}
+
+\chapter{Kafka: a Distributed Messaging System for Log Processing}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Jay Kreps, Neha Narkhede, Jun Rao
+\newline\newline
+\textbf{Publication year}: 2011
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/kafka.pdf}
+
+\chapter{A simple totally ordered broadcast protocol}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Benjamin Reed, Flavio P. Junqueira
+\newline\newline
+\textbf{Publication year}: 2008
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/zab.pdf}
+
+\chapter{In Search of an Understandable Consensus Algorithm}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Diego Ongaro, John Ousterhout
+\newline\newline
+\textbf{Publication year}: 2014
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/raft.pdf}
+
+\chapter{Bitcoin: A Peer-to-Peer Electronic Cash System}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Satoshi Nakamoto
+\newline\newline
+\textbf{Publication year}: 2008
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/bitcoin.pdf}
+
+\chapter{Ethereum: a secure decentralized generalized transaction ledger}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Gavin Wood
+\newline\newline
+\textbf{Publication year}: 2015
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/ethereum.pdf}
+
+\chapter{Tor: The Second-Generation Onion Router}
+\vspace*{-7mm}
+\Large \textbf{Authors}: \\
+Roger Dingledine, Nick Mathewson, Paul Syverson
+\newline\newline
+\textbf{Publication year}: 2010
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.4\textwidth]{distributed-systems-blue.pdf}
+\end{figure}
+\includepdf[pages=-]{papers/tor.pdf}
+
+\pagecolor{blue}\afterpage{}
+\newpage\null\thispagestyle{empty}\newpage
+
+\end{document}

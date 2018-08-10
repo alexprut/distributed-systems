@@ -1,0 +1,74 @@
+digraph G {
+   node [shape=box]
+
+   bitcoin [label="Bitcoin"]
+   ethereum [label="Ethereum"]
+   raft [label="Raft"]
+   zab [label="Zab"]
+   kafka [label="Kafka"]
+   spanner [label="Spanner"]
+   cap [label="CAP Theorem"]
+   mapreduce [label="MapReduce"]
+   cassandra [label="Cassandra"]
+   spannercap [label="Spanner CAP Theorem"]
+   bigtable [label="Bigtable"]
+   tobp [label="Totaly Orded Broadcast Protocol"]
+   paxosms [label="Paxos Made Simple"]
+   chubby [label="Chubby"]
+   idc [label="Impossibility Distributed Consensus"]
+   tor [label="Tor"]
+   zookeeper [label="Zookeeper"]
+   partparliament [label="Part Time Parliament"]
+   paxosml [label="Paxos Made Live"]
+   chord [label="Chord"]
+   dynamo [label="DynamoDB"]
+   gfs [label="Google File System"]
+   timeclock [label="Time Clock"]
+   zookeeper [label="Zookeeper"]
+   snapshots [label="Snapshots"]
+   byzantine [label="Byzantine"]
+
+   byzantine -> paxosml
+   timeclock -> snapshots
+   timeclock -> paxosms
+   timeclock -> raft
+   gfs -> paxosml
+   gfs -> mapreduce
+   gfs -> raft
+   dynamo -> spanner
+   chord -> dynamo
+   chord -> cassandra
+   chord -> bigtable
+   cap -> spannercap
+   cap -> zookeeper
+   cap -> bitcoin
+   zookeeper -> zab
+   zookeeper -> raft
+   zookeeper -> kafka
+   paxosml -> zookeeper
+   paxosml -> bigtable
+   paxosml -> raft
+   partparliament -> paxosms
+   partparliament -> paxosml
+   partparliament -> zab
+   partparliament -> chubby
+   partparliament -> paxosml
+   partparliament -> bigtable
+   partparliament -> raft
+   partparliament -> zookeeper
+   partparliament -> spanner
+   idc -> byzantine
+   idc -> paxosms
+   chubby -> raft
+   chubby -> paxosml
+   paxosms -> chubby
+   paxosms -> raft
+   paxosms -> paxosml
+   bigtable -> spanner
+   bigtable -> raft
+   spanner -> raft
+   spanner -> spannercap
+   mapreduce -> cassandra
+   mapreduce -> spanner
+   bitcoin -> ethereum
+}
