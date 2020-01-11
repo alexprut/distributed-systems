@@ -31,6 +31,7 @@ regarding the topic in the academic world.
 * [Distributed Snapshots: Determining Global States of Distributed Systems](https://github.com/alexprut/distributed-systems/raw/master/papers/distributed-snapshots.pdf)
 * [Impossibility of Distributed Consensus with One Faulty Process](https://github.com/alexprut/distributed-systems/raw/master/papers/impossibility-of-consensus-with-one-faulty-process.pdf)
 * [The Byzantine Generals Problem](https://github.com/alexprut/distributed-systems/raw/master/papers/byzantine-generals-problem.pdf)
+* [Practical Byzantine Fault Tolerance](https://github.com/alexprut/distributed-systems/raw/master/papers/pbft.pdf)
 * [The Part-Time Parliament](https://github.com/alexprut/distributed-systems/raw/master/papers/the-part-time-parliament.pdf)
 * [Paxos Made Simple](https://github.com/alexprut/distributed-systems/raw/master/papers/paxos-made-simple.pdf)
 * [Brewer’s Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web](https://github.com/alexprut/distributed-systems/raw/master/papers/cap-theorem.pdf)
@@ -99,13 +100,14 @@ Virtuoso Edition
 1. Ethereum: a secure decentralized generalized transaction ledger
 
 Maestro Edition  
-[![Download](https://img.shields.io/badge/download-pdf-blue.svg?style=flat)](https://github.com/alexprut/distributed-systems/raw/master/distributed-systems-maestro.pdf) [![Chapters](https://img.shields.io/badge/chapters-25-lightgrey.svg?style=flat)](#maestro-edition--) [![Pages](https://img.shields.io/badge/pages-405-lightgrey.svg?style=flat)](#maestro-edition--) 
+[![Download](https://img.shields.io/badge/download-pdf-blue.svg?style=flat)](https://github.com/alexprut/distributed-systems/raw/master/distributed-systems-maestro.pdf) [![Chapters](https://img.shields.io/badge/chapters-25-lightgrey.svg?style=flat)](#maestro-edition--) [![Pages](https://img.shields.io/badge/pages-421-lightgrey.svg?style=flat)](#maestro-edition--) 
 -----------------
 
 1. Time, Clocks, and the Ordering of Events in a Distributed System
 1. Distributed Snapshots: Determining Global States of Distributed Systems
 1. Impossibility of Distributed Consensus with One Faulty Process
 1. The Byzantine Generals Problem
+1. Practical Byzantine Fault Tolerance
 1. The Part-Time Parliament
 1. Paxos Made Simple
 1. Brewer’s Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web
